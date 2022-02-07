@@ -40,13 +40,13 @@ Using the extended Euclidean algorithm to compute modular inverses:
 ```
 We can now calculate the resulting public key K from a randomly generated private key k (where K = k*G), using the double-and-add method to efficiently traverse the curve:
 ```
-let bits = bit_representation(s) # the vector of bits (from MSB to LSB) representing s\
-let res = O # point at infinity\
-for bit in bits:\
-    res = res + res # double\
-    if bit == 1:\
-        res = res + P # add\
-    i = i - 1\
+let bits = bit_representation(s) # the vector of bits (from MSB to LSB) representing s
+let res = O # point at infinity
+for bit in bits:
+    res = res + res # double
+    if bit == 1:
+        res = res + P # add
+    i = i - 1
 return res
 ```
 
