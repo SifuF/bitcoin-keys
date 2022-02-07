@@ -1,6 +1,6 @@
 # **bitcoin-keys**
 
-bitcoin key generator from scratch with no external dependencies.
+#### Key generation from scratch with no external dependencies.
 
 Bitcoin uses the ECDSA algorithm with [**Secp256k1**](http://www.secg.org/sec2-v2.pdf) which specifies the elliptic curve E domain parameters T over finite field F<sub>p</sub>
 
@@ -38,7 +38,7 @@ Using the extended Euclidean algorithm to compute modular inverses:
 
    return t
 ```
-We can now efficiently calculate the resulting public key K from a randomly generated private key k (where K = k*G), using the double-and-add method to traverse the curve:
+We can now calculate the resulting public key K from a randomly generated private key k (where K = k*G), using the double-and-add method to efficiently traverse the curve:
 ```
 let bits = bit_representation(s) # the vector of bits (from MSB to LSB) representing s\
 let res = O # point at infinity\
@@ -51,7 +51,7 @@ return res
 ```
 
 Running the program with test private key k:\
-k = 1E99423A4ED27608A15A2616A2B0E9E52CED330AC530EDCC32C8FFC6A526AEDD
+**k = 1E99423A4ED27608A15A2616A2B0E9E52CED330AC530EDCC32C8FFC6A526AEDD**
 
 we get uncompressed public key K:\
-K = 04f028892bad7ed57d2fb57bf33081d5cfcf6f9ed3d3d7f159c2e2fff579dc341a7cf33da18bd734c600b96a72bbc4749d5141c90ec8ac328ae52ddfe2e505bdb
+**K = 04f028892bad7ed57d2fb57bf33081d5cfcf6f9ed3d3d7f159c2e2fff579dc341a7cf33da18bd734c600b96a72bbc4749d5141c90ec8ac328ae52ddfe2e505bdb**
