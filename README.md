@@ -1,4 +1,4 @@
-# **bitcoin-keys**
+# **Bitcoin Keys**
 
 #### Key generation from scratch with no external dependencies.
 
